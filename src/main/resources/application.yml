@@ -1,0 +1,15 @@
+#spring.datasource.url: jdbc:postgresql://database-1.clmwuysmy0m5.ap-northeast-2.rds.amazonaws.com:5432/postgres
+#spring.datasource.username: postgres
+#spring.datasource.password: qkrcksrb123
+#?? ??? ?? ?? password??
+
+spring:
+  datasource: #url, username, password 3??? ???
+    url: jdbc:postgresql://database-1.clmwuysmy0m5.ap-northeast-2.rds.amazonaws.com:5432/postgres
+    username: postgres
+    password: qkrcksrb123
+    hikari: #hikari ???? ????? ??
+      maximum-pool-size: 1
+      minimum-idle: 1
+  jpa:
+    generate-ddl: true  # create, drop ?? ??

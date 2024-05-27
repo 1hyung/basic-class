@@ -34,6 +34,11 @@ dependencies {
 
     //swagger
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
+    //데이터 베이스를 사용하려면 jpa, postgresql
+    //jpa
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    //postgresql 실행시간에 이용할 수 있어야 함.
+    runtimeOnly("org.postgresql:postgresql")
 } // 집중해서 할 부분
 
 tasks.withType<KotlinCompile> {
