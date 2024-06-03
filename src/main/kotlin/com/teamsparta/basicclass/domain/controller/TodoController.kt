@@ -24,5 +24,4 @@ class TodoController {
     ): ResponseEntity<Long> {
         return ResponseEntity.ok(id)
     }// 입력하는 제대로 응답하는 것
-
 }
