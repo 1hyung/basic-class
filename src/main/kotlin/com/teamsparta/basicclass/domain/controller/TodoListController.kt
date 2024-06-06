@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*
 
 @RestController//HTTP로 통신을 할건데 주소에 맞게 잘 들어왔는데 확인하기 위해 mapping하는 약할
 @RequestMapping("/api/v1/todos")//항상 이 주소로 시작되는 녀석들만 mapping
-class TodoController(
+class TodoListController(
     val todoService: TodoService, // 생성자 주입 DI TodoServiceImpl
 ) {
     //http://localhost:8080/api/v1/todos
@@ -18,7 +18,7 @@ class TodoController(
 
     @PostMapping
     fun createTodo(
-        @RequestBody request: TodoRequest
+        @RequestBody request: TodoRequest,
     ): ResponseEntity<TodoResponse> {
         //service에 있는 createTodo함수를 호출
         //request를 service를 넘겨준다.

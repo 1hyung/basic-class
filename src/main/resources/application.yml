@@ -2,15 +2,23 @@
 #spring.datasource.username: postgres
 #spring.datasource.password: qkrcksrb123
 #?? ??? ?? ?? password??
-
+# jdbc: 데이터베이스 종류 : // 주소:포트/데이터베이스 이름
 spring:
-  datasource: #url, username, password 3??? ???
-    url: jdbc:postgresql://database-1.clmwuysmy0m5.ap-northeast-2.rds.amazonaws.com:5432/postgres
-    # jdbc: 데이터베이스 종류 : // 주소:포트/데이터베이스 이름
-    username: postgres
-    password: qkrcksrb1234
-    hikari: #hikari ???? ????? ??
+  datasource:
+    url: jdbc:postgresql://aws-0-ap-northeast-2.pooler.supabase.com:6543/postgres
+    username: postgres.msyhbotersopizvttzxt
+    password: ryuwonhyung
+    hikari:
       maximum-pool-size: 1
       minimum-idle: 1
   jpa:
-    generate-ddl: true  # create, drop ?? ??
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+
+   # url: jdbc:postgresql://database-1.clmwuysmy0m5.ap-northeast-2.rds.amazonaws.com:5432/postgres
+    # jdbc: 데이터베이스 종류 : // 주소:포트/데이터베이스 이름
+    #username: postgres
+    #password: qkrcksrb1234
