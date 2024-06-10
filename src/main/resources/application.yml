@@ -3,11 +3,13 @@
 #spring.datasource.password: qkrcksrb123
 #?? ??? ?? ?? password??
 # jdbc: 데이터베이스 종류 : // 주소:포트/데이터베이스 이름
+#connect wonhyung-db
 spring:
   datasource:
-    url: jdbc:postgresql://aws-0-ap-northeast-2.pooler.supabase.com:6543/postgres
-    username: postgres.msyhbotersopizvttzxt
-    password: ryuwonhyung
+    url: jdbc:postgresql://database-1.clmwuysmy0m5.ap-northeast-2.rds.amazonaws.com:5432/postgres
+    # jdbc: 데이터베이스 종류 : // 주소:포트/데이터베이스 이름
+    username: postgres
+    password: qkrcksrb123
     hikari:
       maximum-pool-size: 1
       minimum-idle: 1
@@ -18,7 +20,8 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
 
-   # url: jdbc:postgresql://database-1.clmwuysmy0m5.ap-northeast-2.rds.amazonaws.com:5432/postgres
-    # jdbc: 데이터베이스 종류 : // 주소:포트/데이터베이스 이름
-    #username: postgres
-    #password: qkrcksrb1234
+
+
+    #url: jdbc:postgresql://aws-0-ap-northeast-2.pooler.supabase.com:6543/postgres
+    #username: postgres.msyhbotersopizvttzxt
+    #password: ryuwonhyung
