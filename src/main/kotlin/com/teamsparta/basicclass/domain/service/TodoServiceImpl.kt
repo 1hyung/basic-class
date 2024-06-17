@@ -78,8 +78,11 @@ class TodoServiceImpl : TodoService {
         return todo.toResponse()
     }
 
-    override fun deleteTodo() {
-        TODO("Not yet implemented")
+    @Transactional
+    override fun deleteTodo(id: Long): TodoResponse {
+        val todo = todoRepository.findByIdOrNull(id) ?: throw RuntimeException("해당 아이디의 $id 가 존재하지 않습니다.")
+        todo.deleteTitleOrDescription()
+        return todo.toResponse()
     }
 }
 

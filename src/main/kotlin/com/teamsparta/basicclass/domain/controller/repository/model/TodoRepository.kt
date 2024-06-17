@@ -3,7 +3,6 @@ package com.teamsparta.basicclass.domain.controller.repository.model
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface TodoRepository: JpaRepository<Todos, Long> {
-
 }
 
 //왜 구현체가 없지?

@@ -7,6 +7,7 @@ import com.teamsparta.basicclass.domain.dto.TodoResponse
 import com.teamsparta.basicclass.domain.service.TodoService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
@@ -85,4 +86,11 @@ class TodoController(
             return 반환값
         }
         반한값의 자료형과 반환타입이 일치해야 함.*/
+    @DeleteMapping("/{todoId}")
+    fun deleteTodo(
+        @PathVariable todoId: Long
+    ): ResponseEntity<Unit> {
+        todoService.deleteTodo(todoId)
+        return ResponseEntity.noContent().build()
+    }
 }

@@ -26,6 +26,11 @@ data class Todos(
         this.title = title ?: this.title
         this.description = description ?: this.description
     }
+
+    fun deleteTitleOrDescription() {
+        this.title = ""
+        this.description = ""
+    }
 }
 
 //val todo = Todos(id, title, description, witer)

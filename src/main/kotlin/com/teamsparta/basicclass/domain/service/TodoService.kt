@@ -18,6 +18,8 @@ interface TodoService {
         description: String?
     ): TodoResponse // 뭘 할지 청사진을 적는 곳, 이 함수를 사용하려면 어떤 것을 써야지 고민하는 단계
 
-    fun deleteTodo()
+    fun deleteTodo(
+        //delete는 title과 description을 매개변수로 받을 필요가 없다. id 만으로 충분!
+        id: Long,
+    ): TodoResponse
 }
-

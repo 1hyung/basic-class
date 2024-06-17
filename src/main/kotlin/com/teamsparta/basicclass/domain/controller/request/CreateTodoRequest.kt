@@ -4,5 +4,4 @@ data class CreateTodoRequest(
     val title: String,
     val description: String,
     val writer: String,
-
-    )
+)
